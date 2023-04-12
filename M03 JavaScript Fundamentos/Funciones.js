@@ -13,8 +13,17 @@ var sumaTres1=function(x){
 var sumaTres2 = (x) =>{
     return x+3;
 }*/
-
 function cuidadiConelConsoleLog(nombre){
-    console.log(nombre);
+    //console.log(nombre);
     return nombre;
+}
+
+
+function otrafuncion(){
+    return "El nombre retornado por la funcion 'CuidadoconElConsoleLog' es " + cuidadiConelConsoleLog("Minsa");
+}
+
+function CudidadoConElReturn(nombre){
+    return nombre;
+    console.log(nombre);
 }
