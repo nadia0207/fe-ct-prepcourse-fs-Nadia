@@ -76,4 +76,4 @@ function comprobarBreak(x){
     return i;
 }
 
-console.log(comprobarBreak(6));
+console.log(comprobarBreak(6)); //Resultado: Siempre se imprima 3 

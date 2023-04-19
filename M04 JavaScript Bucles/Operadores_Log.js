@@ -3,7 +3,7 @@ function condicionComplea(num){
     else console.log(false);
 };
 
-condicionComplea(10);
-condicionComplea(6);
-condicionComplea(3);
-condicionComplea(5);
+condicionComplea(10); //Resultado: True
+condicionComplea(6); //Resultado: false
+condicionComplea(3); //Resultado: True
+condicionComplea(5); //Resultado: false
