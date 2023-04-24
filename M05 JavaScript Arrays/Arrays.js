@@ -87,11 +87,3 @@ console.log(arr); //Imprime [ 'BOOM', 'BOOM', 'BOOM', 'BOOM', 'BOOM' ] */
 
 //---------------------------*******************
 
-function verificando (){
-    var listaDeCompras= [];
-    listaDeCompras[0] = 'Tomates';
-    listaDeCompras[1] = 'Lechuga'
- 
-    var elementodelArray = listaDeCompras[0];
-    console.log(elementodelArray); 
-}
