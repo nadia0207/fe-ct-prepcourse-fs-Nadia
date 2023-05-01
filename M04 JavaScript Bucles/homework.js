@@ -108,7 +108,9 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   if(num - Math.floor(num) ===0 || num === 0){
+   if(! Number.isInteger (num)){
+      return false;
+   } else if(num - Math.floor(num) === 0){
       return true;
    }else false;
 }
@@ -119,7 +121,15 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
+   if (num % 3 === 0 && num % 5 === 0 ) { return 'fizzbuzz'; }
+   else if (num % 3 === 0){ return 'fizz';}
+   else if (num % 5 === 0){ return 'buzz';}
+   else { return false;}
+
 }
+//COMPROBANDO
+//console.log(fizzBuzz(15));
+
 
 function operadoresLogicos(num1, num2, num3) {
    // La función recibe tres números distintos.
@@ -129,6 +139,15 @@ function operadoresLogicos(num1, num2, num3) {
    // Si todos los argumentos son cero, retornar ---> "Error".
    // Si no se cumple ninguna de las condiciones anteriores, retornar false.
    // Tu código:
+   if (num1 > num2 && num1 > num3 && num1 > 0){ return 'Numero 1 es mayor y positivo'; }
+   else if (num1 < 0 || num2 < 0 || num3 <0 ){ return 'Hay negativos';}
+   else if (num3 > num1 && num3 > num2){
+      num3 = num3 + 1;
+      return num3;
+   }
+   else if (num1 === 0 || num2 === 0 || num3 ===0){
+      return 'Error';
+   } else { return false;}
 }
 
 function esPrimo(num) {
@@ -138,26 +157,61 @@ function esPrimo(num) {
    // [Pista 2]: puedes resolverlo utilizando un `bucle for`.
    // [Nota]: los números negativos, 0 y 1 NO son números primos.
    // Tu código:
+   if (num <= 1){
+      return false;
+   }
+
+   for(let i=2; i<num ; i++){
+      if(num % i === 0){
+         return false;
+      }
+   }
+   return true;
 }
+//COMPROBANDO
+//console.log(esPrimo(8));
+//console.log(esPrimo(7));
 
 function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   return valor === true ? 'Soy verdadero' : 'Soy falso';
 }
+//COMPROBANDO
+//console.log(esVerdadero(true));
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   let contadorDigito = 0;
+   while (num >=1){
+      contadorDigito = contadorDigito + 1;
+      num = num / 10;
+   }
+   if(contadorDigito === 3){ return true;}
+   else {return false;}
 }
+//COMPROBANDO
+//console.log(tieneTresDigitos(145));
 
 function doWhile(num) {
    // Implementar una función que aumente el valor recibido en 5 hasta un límite de 8 veces.
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   let i = 0;
+
+do {
+   i = i + 1;
+   num = num + 5;
+} while (i < 8);
+
+ return num;
 }
+//COMPROBANDO
+console.log(doWhile(5));
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
