@@ -10,12 +10,34 @@ function crearUsuario() {
    // El valor {{nombre}} debe ser el nombre definido para la instancia de la clase.
    // Retornar la clase.
    // Tu código:
+   class Usuario {
+      constructor(usuario,nombre,email,password ){
+         this.usuario = usuario;
+         this.nombre = nombre;
+         this.email = email;
+         this.password = password;
+      }
+      saludar(){
+         return('Hola, mi nombre es '+ this.nombre);
+      }
+   }
+
+   return Usuario;
 }
+/* //COMPROBANDO
+var Usuarios = crearUsuario();
+var Miusuario = new Usuarios('Nadia07','Nadia Llamoca','nadia@hotmail.com','1478965' )
+Miusuario.saludar(); */
 
 function agregarMetodoPrototype(Usuario) {
    // Agrega un método al prototipo de "Usuario".
    // El método debe llamarse "saludar" y debe devolver el string "Hello World!".
    // Tu código:
+    Usuario.prototype.saludar = function(){
+      return('Hello World!');
+   };
+
+   return Usuario;
 }
 
 function agregarStringInvertida() {
