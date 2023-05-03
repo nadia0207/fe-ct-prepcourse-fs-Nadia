@@ -48,14 +48,60 @@ function capToFront(string) {
    // Retornar el string.
    // [EJEMPLO]: soyHENRY ---> HENRYsoy
    // Tu código:
+   letras = string.split('');
+   ArrayMayusculas = [];
+   ArrayMinusulas= [];
+   nuevoString = '';
+   for (let j = 0; j< letras.length ; j++){
+      if (letras[j] === letras[j].toUpperCase()){
+         ArrayMayusculas.push(letras[j]);
+      } else {
+         ArrayMinusulas.push(letras[j]);
+      }
+   }
+   nuevoString = ArrayMayusculas.concat(ArrayMinusulas).join('');
+   return nuevoString;
 }
+
+//COMPROBANDO
+//console.log(capToFront('soyHENRY'));
+//console.log(capToFront('DESArrollaDOR'));
+
 
 function asAmirror(frase) {
    // Recibes una frase. Tu tarea es retornar un nuevo string en el que el orden de las palabras sea el mismo.
    // La diferencia es que cada palabra estará escrita al inverso.
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
+   palabras = frase.split(' ');
+   unaPalabra = [];
+   letras = [];
+
+   for(let i=0 ; i< palabras.length; i++){
+        unaPalabra = palabras[i].reverse();
+        letras.push(unaPalabra);        
+   }
+   return letras;
 }
+
+// console.log(asAmirror('The Henry Challenge is close!'));
+var frase = 'The Henry Challenge is close!';
+palabras = frase.split(' ');
+unaPalabra = '';
+var nuevo = [];
+letras = [];
+
+for(let i=0 ; i< palabras.length; i++){
+     unaPalabra = palabras[i]; 
+     let nuevo =unaPalabra.split('');
+     letras.push(nuevo.reverse().join(''));
+
+}
+console.log(letras);
+
+/*var str= 'Parangaricutirimucuaro';
+let arrStr = str.split("");
+console.log(arrStr.reverse().join(""));*/
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
