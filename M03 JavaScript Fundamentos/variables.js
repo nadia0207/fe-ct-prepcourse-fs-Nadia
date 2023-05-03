@@ -21,4 +21,3 @@ console.log (7 === "7");
 // para probar commit 2
 
 
-
