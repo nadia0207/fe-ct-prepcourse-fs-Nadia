@@ -6,7 +6,19 @@ function deObjetoAarray(objeto) {
    // Estos elementos debe ser cada par clave:valor del objeto recibido.
    // [EJEMPLO]: {D: 1, B: 2, C: 3} ---> [['D', 1], ['B', 2], ['C', 3]].
    // Tu código:
+   let arregloNuevo = [];
+   
+   for (let prop in objeto){
+      arregloNuevo.push([prop,objeto[prop]]);
+      
+   }
+
+   return arregloNuevo;
 }
+
+//COMPROBANDO
+//let objeto = {D: 1, B: 2, C: 3} ;
+//console.log(deObjetoAarray(objeto));
 
 function numberOfCharacters(string) {
    // La función recibe un string. Debes recorrerlo y retornar un objeto donde cada propiedad es una de las
@@ -14,7 +26,21 @@ function numberOfCharacters(string) {
    // Las letras deben estar en orden alfabético.
    // [EJEMPLO]: "adsjfdsfsfjsdjfhacabcsbajda" ---> { a: 5, b: 2, c: 2, d: 4, f: 4, h:1, j: 4, s: 5 }
    // Tu código:
+   let letras = string.split('').sort(); //Sort ordena alfabeticamente
+   
+   let objeto = {};
+   for (let i=0 ; i<letras.length ; i++){
+     
+     if (!objeto.hasOwnProperty(letras[i])){
+         objeto[letras[i]] = 1;
+     } else {
+         objeto[letras[i]] = objeto[letras[i]] + 1;
+     }
+   }
+   return objeto;
 }
+//COMPROBANDO
+//console.log(numberOfCharacters('adsjfdsfsfjsdjfhacabcsbajda'));
 
 function capToFront(string) {
    // Recibes un string con algunas letras en mayúscula y otras en minúscula.
