@@ -74,46 +74,57 @@ function asAmirror(frase) {
    // [EJEMPLO]: "The Henry Challenge is close!"  ---> "ehT yrneH egnellahC si !esolc"
    // Tu código:
    palabras = frase.split(' ');
-   unaPalabra = [];
+   unaPalabra = '';
+   nuevo = [];
    letras = [];
 
    for(let i=0 ; i< palabras.length; i++){
-        unaPalabra = palabras[i].reverse();
-        letras.push(unaPalabra);        
+        unaPalabra = palabras[i];
+        nuevo = unaPalabra.split('');
+        letras.push(nuevo.reverse().join(''));       
    }
-   return letras;
+   return letras.join(' ');
 }
+//COMPROBANDO
+//console.log(asAmirror('I love you so much!'));
 
-// console.log(asAmirror('The Henry Challenge is close!'));
-var frase = 'The Henry Challenge is close!';
-palabras = frase.split(' ');
-unaPalabra = '';
-var nuevo = [];
-letras = [];
-
-for(let i=0 ; i< palabras.length; i++){
-     unaPalabra = palabras[i]; 
-     let nuevo =unaPalabra.split('');
-     letras.push(nuevo.reverse().join(''));
-
-}
-console.log(letras);
-
-/*var str= 'Parangaricutirimucuaro';
-let arrStr = str.split("");
-console.log(arrStr.reverse().join(""));*/
 
 function capicua(numero) {
    // Si el número que recibes es capicúa debes retornar el string: "Es capicua".
    // Caso contrario: "No es capicua".
    // Tu código:
+   let numString = numero.toString();
+   let numInvertido = numString.split('').reverse().join('');
+   if (numString === numInvertido){
+      return 'Es capicua';
+   } else {
+      return 'No es capicua';
+   }
 }
+
+//VERIFICANDO
+//console.log(capicua(9102019));
+//console.log(capicua(14578));
 
 function deleteAbc(string) {
    // Tu tarea es eliminar las letras "a", "b" y "c" del string recibido.
    // Retorna el string sin estas letras.
    // Tu código:
+   let cadena = string.split('');
+   let newLetra = [];
+   
+   for(let i=0 ; i<cadena.length; i++){
+      if (cadena[i] != 'a' && cadena[i] != 'b' && cadena[i] !='c'){
+         newLetra.push(cadena[i]);
+      }
+   }
+   return newLetra.join('');
 }
+
+//VERIFICANDO
+//console.log(deleteAbc('abecedariocr'));
+
+
 
 function sortArray(arrayOfStrings) {
    // Recibes un arreglo de strings.
@@ -121,7 +132,16 @@ function sortArray(arrayOfStrings) {
    // de la longitud de cada string.
    // [EJEMPLO]: ["You", "are", "beautiful", "looking"]  ---> [“You", "are", "looking", "beautiful"]
    // Tu código:
+   return arrayOfStrings.sort(
+      function(a,b){
+         return a.length - b.length;
+      }
+   );
+   
 }
+//COMPROBAR
+//array = ["You", "are", "beautiful", "looking",'mouse'];
+//console.log(sortArray(array));
 
 function buscoInterseccion(array1, array2) {
    // Recibes dos arreglos de números.
@@ -130,7 +150,19 @@ function buscoInterseccion(array1, array2) {
    // Si no tienen elementos en común, retornar un arreglo vacío.
    // [PISTA]: los arreglos no necesariamente tienen la misma longitud.
    // Tu código:
+   nuevoArray = [];
+   for(let i=0; i< array1.length; i++){
+      if(array2.includes(array1[i])){
+         nuevoArray.push(array1[i]);
+      }
+   }
+   return nuevoArray;
 }
+//COMPROBANDO
+//console.log(buscoInterseccion([1, 2, 3], [1, 5, 8, 3]));
+//console.log(buscoInterseccion([1, 20, 3],[22, 5, 7]));
+
+
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
 module.exports = {
