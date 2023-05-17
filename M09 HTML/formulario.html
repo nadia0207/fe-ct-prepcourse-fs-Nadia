@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario</title>
+</head>
+
+<body>
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="accommodation.html">Accommodation</a></li>
+            <li><a href="visits_activies.html">visits Activies</a></li>
+            <li><a href="entertainment.html">Entretenimiento</a></li>
+        </ul>
+
+    </nav>
+
+
+    <form action="datos.js" method="get" enctype="multipart/form-data">
+
+        <label for="nombre">Nombre completo:</label>
+        <input type="text" name="nombre" value=""/>
+
+        <label for="email">Correo Electronico</label>
+        <input type="email" name="email" value=""/>
+
+        <label for="genero">Genero:</label>
+        <input type="radio" name="genero" id="femenino" value="f"/>
+        <label for="femenino"> femenino</label>
+        <input type="radio" name="genero" id="masculino" value="m"/>
+        <label for="masculino">Masculino</label>
+
+        <label for="talles">Talle:</label>
+        <select name="talles">
+            <option value="L">Large</option>
+            <option value="M">Medium</option>
+            <option value="S">Small</option>
+        </select>
+
+        <label for="consulta"> consulta:</label>
+        <textarea name="consulta" rows="5" cols="33"></textarea>
+
+        <input type="submit" value="Enviar">
+        <input type="submit" value="Borrar">
+
+    </form>
+
+</body>

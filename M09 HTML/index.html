@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Lima - Perú</title>
+
+    </head>
+
+    <body>
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="accommodation.html">Accommodation</a></li>
+                <li><a href="visits_activies.html">visits Activies</a></li>
+                <li><a href="entertainment.html">Entretenimiento</a></li>
+                <li><a href="form.html">Contactenos</a></li>
+            </ul>
+
+        </nav>
+
+
+        <h1>Bienvenido a mi ciudad</h1>
+        <h2>Información General</h2>
+
+        <main>
+        <P>Lima, oficialmente, según la Constitución, Ciudad de Lima,11​ es la capital de la República del Perú.12​ Está ubicada en la costa central del país, a orillas del océano Pacífico, integrando una extensa y poblada área urbana, flanqueada por el desierto costero y extendida sobre los valles de los ríos Chillón, Rímac y Lurín. La proyección censal del 2022 estableció una población de 13 943 800 habitantes, cifra que la convierte en la ciudad más poblada del país.1​ El conglomerado urbano conformado por Lima y Callao, por su lado, agrupa una población de 11 098 000 habitantes1​ distribuida en cincuenta distritos, donde la provincia de Lima concentra cuarenta y tres distritos y la provincia de Callao, siete distritos. La aglomeración urbana se organiza en conos o ejes de la ciudad: Lima Norte, Lima Sur, Lima Este y Lima Centro.</P>
+
+        <p>
+        <bold><strong>Historia:</strong></bold> El virreinato, en su momento, fungió como la entidad administrativa más relevante de la Monarquía Hispánica dentro de América del Sur, mientras que Lima, a su vez, fue la ciudad más grande e importante en toda América Austral durante el periodo colonial. Después del proceso de independencia, pasó a ser la capital de los departamentos libres y, posteriormente, de la república peruana.<br>    
+        En octubre de 2013, <i>Lima</i> fue elegida para albergar los Juegos Panamericanos 2019. También fue sede de la Conferencia de las Naciones Unidas sobre el Cambio Climático en la edición de 2014, fue sede del foro mundial APEC en las ediciones de 2008 y 2016, de las Reuniones Anuales del Fondo Monetario Internacional y el Grupo del Banco Mundial en octubre de 2015, <em>del concurso Miss Universo 1982 y está programada para ser sede de la Copa Mundial de Fútbol Sub-17 de 2023.</em>
+        </p>
+        </main>
+        <img src="Imagen/Lima-Peru.webp" alt="Lima" title="Lima-Perú">
+
+        <!--Definimos una tabla-->
+        <table border="1" cellpadding="4" cellspacing="4">
+            <caption>
+                Esta es una tabla
+            </caption>
+            <thead>
+                <th>--Encabezado--1</th>
+                <th>--Encabezado--2</th>
+                <th>--Encabezado--3</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Dato 1</td>
+                    <td>Dato 2</td>
+                    <td>Dato 3</td>
+                </tr>
+                <tr>
+                    <td>Dato 4</td>
+                    <td>Dato 5</td>
+                    <td>Dato 6</td>
+                </tr>
+            </tbody>
+            <tfoot>
+                <tr>
+                    <td>Pie de tabla 1</td>
+                    <td>Pie de tabla 2</td>
+                    <td>Pie de tabla 3</td>
+                </tr>
+            </tfoot>
+
+        </table>
+        <ol>
+            <h3>Lista Ordenada</h3>
+            <li>Item de la lista ordenada n°1</li>
+            <li>Item de la lista ordenada n°2</li>
+            <li>Item de la lista ordenada n°3</li>
+            <li>Item de la lista ordenada n°4</li>
+        </ol>
+
+        <ul>
+            <h4>Lista No Ordenada</h4>
+            <li>Item de la lista no ordenada n°1</li>
+            <li>Item de la lista no ordenada n°2</li>
+            <li>Item de la lista no ordenada n°3</li>
+            <li>Item de la lista no ordenada n°4</li>
+        </ul>
+
+        <ul>
+            <h5>Lista Anidada</h5>
+            <li>Item de lista no ordenada n°1</li>
+            <li>Item de lista no ordenada n°2</li>
+            <li>Item de lista no ordenada n°3</li>
+            <ul>
+                <li>Sub Item 1° de la lista no ordenada n°3</li>
+                <li>Sub Item 2° de la lista no ordenada n°3</li>
+                <li>Sub Item 3° de la lista no ordenada n°3</li>
+            </ul>
+        </ul>
+
+        <dl>
+            <h6>Lista de definicion</h6>
+            <dt>Término 1</dt>
+                <dd>Significado o definicion del termino 1</dd>
+            <dt>Término 2</dt>
+                <dd>Significado o definicion del termino 2</dd>
+            <dt>Término 3</dt>
+                <dd>Significado o definicion del termino 3</dd>
+        </dl>
+
+        <form action="datos.js" method="get" enctype="multipart/form-data">
+            <table>
+                <thead>
+
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><label for="Nombre">Nombre</label></td>
+                        <td><input type="text" name="apellido" value=""></td>
+                    </tr>
+                    <tr>
+                        <td>Descripcion:</td>
+                        <td><textarea name="descripcion" rows="5" cols="33"></textarea></td>
+                    </tr>
+                    <tr>
+                        <td>Seleccione:</td>
+                        <td>
+                             <select name="talles">
+                                <option value="L">Large</option>
+                                <option value="M">Medio</option>
+                                <option value="S">Small</option>
+                            </select>
+                        </td>
+                    </tr>
+                    <tr>
+                        <div>
+                            <label for="grupo"> Grupo de Opciones</label>
+
+                            <input type="radio" name="grupo" id="opcion1" value="op1">
+                            <label for="opcion1">Opción 1</label>
+
+                            <input type="radio" name="grupo" id="opcion2" value="op2">
+                            <label for="opcion2">Opción 2</label>
+                        </div>
+
+                        <div>
+                            <label for="grupo2">Grupo de opciones:</label>
+
+                            <input type="checkbox" name="grupo2" id="opcion1" value="op1">
+                            <label for="opcion1">Opción 1</label>
+
+                            <input type="checkbox" name="grupo2" id="opcion2" value="op2">
+                            <label for="opcion2">Opción 2</label>
+                        </div>
+                    </tr>
+                </tbody>
+            </table>
+        
+        </form>
+
+
+    </body>
+</html>
