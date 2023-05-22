@@ -87,3 +87,65 @@ console.log(arr); //Imprime [ 'BOOM', 'BOOM', 'BOOM', 'BOOM', 'BOOM' ] */
 
 //---------------------------*******************
 
+const numeros = [10,20,30,40,50];
+
+const resultado = numeros.map((item,index,array)=>{
+    console.log(item);
+    console.log(index);
+    console.log(array);
+
+    return 1;
+});
+
+console.log(resultado);
+/*Resultado: console.log(resultado); ---
+10
+0
+[ 10, 20, 30, 40, 50 ]
+20
+1
+[ 10, 20, 30, 40, 50 ]
+30
+2
+[ 10, 20, 30, 40, 50 ]
+40
+3
+[ 10, 20, 30, 40, 50 ]
+50
+4
+[ 10, 20, 30, 40, 50 ]
+[ 1, 1, 1, 1, 1 ]
+*/
+
+const resultadoDos = numeros.map(item =>{
+    return item * 2;
+});
+console.log(resultadoDos);
+/*Resultado de: console.log(resultadoDos);
+[ 20, 40, 60, 80, 100 ]
+*/
+
+//---------------------------*******************
+const objetos = [
+    {nombre:'A', apellido: 'B'},
+    {nombre:'C', apellido: 'D'},
+    {nombre:'E', apellido: 'F'},
+    {nombre:'G', apellido: 'H'}
+];
+
+const resultadoNyA = objetos.map(item =>{
+    return {
+        ...item, //esto quiere decir que se agregara todas las propiedades del objeto
+        nombreApellido: item.nombre + ' '+ item.apellido
+    }
+});
+
+console.log(resultadoNyA);
+/* Resultado de: console.log(resultadoNyA); 
+[
+  { nombre: 'A', apellido: 'B', nombreApellido: 'A B' },
+  { nombre: 'C', apellido: 'D', nombreApellido: 'C D' },
+  { nombre: 'E', apellido: 'F', nombreApellido: 'E F' },
+  { nombre: 'G', apellido: 'H', nombreApellido: 'G H' }
+]
+*/
