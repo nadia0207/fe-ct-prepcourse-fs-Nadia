@@ -1,0 +1,92 @@
+
+/* p{
+  font-weight:bold;  
+  color: rgb(85, 10, 154);
+  font-size: 150%;
+  background-color: rgb(30, 210, 75);
+}
+ */
+a:link{
+    color: forestgreen;
+    text-decoration-color: hotpink;
+}
+
+a:hover{
+    background-color: rgb(205, 235, 198);
+}
+
+.joinBtn{
+    width: 10em;
+    height: 5ex;
+    background-color: gold;
+    border: 2px solid firebrick;
+    border-radius: 10px;
+    font-weight: bold;
+    color: black;
+    cursor: pointer;
+}
+
+.joinBtn:hover{
+    background-color: bisque;
+}
+
+a:visited{
+    background-color: #ff0055;
+}
+
+a:active{
+    background-color:#ff0055 ;
+}
+
+label{
+    display: block;
+}
+
+input:focus{
+    background-color: lightblue;
+}
+
+select:focus{
+    background-color: rgb(242, 85, 122);
+}
+
+p:not(.irrelevant){
+    font-weight: bold;
+}
+
+p > strong,
+p > b.important {
+    color: crimson;
+}
+
+p > :not(strong,b.important){
+    color: darkmagenta;
+}
+
+li:nth-child(-n + 3){
+    border: 2px solid orange;
+    margin-bottom: 1px;
+    border-radius: 10px;
+}
+
+li:nth-child(even){
+    background-color: lightgreen;
+}
+
+.auto{
+image-rendering: auto;
+image-rendering: pixelated;
+image-rendering: crisp-edges;    
+}
+
+img{
+ width: 100px;
+height: 100px;
+filter:blur(3px);
+filter: contrast(200%);
+filter: grayscale(80%);
+filter: hue-rotate(90deg);
+filter: drop-shadow(16px 16px 20px red) invert(75%);
+
+}
+ 
